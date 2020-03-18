@@ -5,6 +5,6 @@ const cors = require("cors")
 
 app.use(cors())
 
-app.get('/', (req, res) => res.send({ message: 'Hello World!' }))
+app.get('/', (req, res) => res.send({ message: 'Hello, World!' }))
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

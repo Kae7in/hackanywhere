@@ -4,24 +4,31 @@ import downArrow from './down-arrow.svg'
 import './App.css'
 import './fonts/SourceSansPro-Regular.otf'
 import './fonts/SourceSansPro-Bold.otf'
+import Iframe from 'react-iframe'
+import About from './About.js'
+import ReactDOM from 'react-dom';
 
 function App() {
-  fetch('http://localhost:5000')
-  .then((response) => {
-    return response.json()
-  })
-  .then((data) => {
-    console.log(data)
-  })
+  // fetch('http://localhost:5000')
+  // .then((response) => {
+  //   return response.json()
+  // })
+  // .then((data) => {
+  //   console.log(data)
+  // })
 
   function handleJoinClick() {
     window.location.href = 'https://airtable.com/shrAnJnjEMZOCDtQj'
   }
 
+  function handleKeyboardClick() {
+    ReactDOM.render(<About />, document.getElementById('root'))
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <div className="keyboard">
+        <div className="keyboard" onClick={handleKeyboardClick}>
           <img src={keyboard} alt="logo" />
         </div>
 
@@ -29,7 +36,7 @@ function App() {
 
         <div className="headline">
           <h1>A fully <b>remote hackathon</b></h1>
-          <h3><b>></b> &nbsp;Work on ideas to combat the COVID-19 virus while you’re quarantined.</h3>
+          <h3><b>></b> &nbsp;Collaborate with others while quarantined to combat the COVID-19 virus.</h3>
         </div>
 
         <div className="hackathon-1">
@@ -46,9 +53,9 @@ function App() {
 
         <div className="how-it-works">
           <div className="shell-command">> &nbsp;./how-it-works.sh</div>
-          <div>1. Select (or create) an idea to work on</div>
-          <div>2. Share a little about yourself</div>
-          <div>3. Get invited to your assigned Discord channel</div>
+          <div>1. Find an idea to work on</div>
+          <div>2. Tell us about yourself</div>
+          <div>3. Receive invite to assigned Discord channel</div>
         </div>
 
         <div className="who-we-are">
@@ -71,7 +78,10 @@ function App() {
         </div>
       </header>
 
-      idea content here...
+      <div className="ideas">
+        <Iframe url="https://airtable.com/embed/shr9bIpkZkEtyD7ha?backgroundColor=purple&layout=card&viewControls=on"
+          className="ideas-table"/>
+      </div>
     </div>
   );
 }

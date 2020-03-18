@@ -30,12 +30,12 @@ html {
 
 .keyboard {
   /* Small screens */
-  width: 130px;
-  height: 130px;
+  width: 110px;
+  height: 110px;
   grid-row: 1;
   grid-column: 1;
   justify-self: end;
-  margin-top: -44px;
+  margin-top: -34px;
 }
 
 /* Large screens */
@@ -173,6 +173,7 @@ html {
 .hackathon-1 {
   /* Small screens */
   grid-row: 3;
+  justify-self: center;
 
   display: grid;
   grid-template-rows: 40% 45% 15%;
@@ -199,6 +200,7 @@ html {
   .hackathon-1 {
     grid-row: 3;
     grid-column: 2;
+    justify-self: left;
   }
 }
 
@@ -331,6 +333,7 @@ html {
 .ideas-arrow {
   /* Small screens */
   grid-row: 7;
+  margin-top: 50px;
 
   align-self: end;
   justify-self: center;
@@ -341,6 +344,7 @@ html {
   .ideas-arrow {
     grid-row: 4;
     grid-column: 3;
+    margin: 0;
   }
 }
 
@@ -351,8 +355,8 @@ html {
   font-family: Source Sans Pro;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 20px;
   text-align: center;
   text-decoration-line: underline;
 
@@ -363,6 +367,29 @@ html {
   width: 198px;
   height: 38px;
 }
+
+.ideas {
+  display: grid;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.ideas-table {
+  grid-row: 1;
+  justify-self: center;
+  width: 90%;
+  height: 1000px;
+  border-style: solid;
+  border-color: lightgray;
+}
+
+/* Large screens */
+@media screen and (min-width: 40em) {
+  .ideas-table {
+    width: 50%;
+  }
+}
+
 
 
 
