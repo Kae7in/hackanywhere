@@ -7,7 +7,7 @@ import './fonts/SourceSansPro-Bold.otf'
 import Iframe from 'react-iframe'
 import About from './About.js'
 import ReactDOM from 'react-dom';
-import Countdown from 'react-countdown';
+import Countdown, { calcTimeDelta } from 'react-countdown';
 
 function App() {
   // fetch('http://localhost:5000')
@@ -48,7 +48,7 @@ function App() {
           </div>
         </div>
 
-        <div className="countdown"><Countdown date={Date.now() + 293227945} /></div>
+        <div className="countdown"><Countdown date={Date.now() + calcTimeDelta(new Date(2020, 2, 21, 10, 0, 0, 0), Date.now()).total} /></div>
 
         <button className="join-button" onClick={handleJoinClick}>
           JOIN THE FIGHT
