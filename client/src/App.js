@@ -7,6 +7,7 @@ import './fonts/SourceSansPro-Bold.otf'
 import Iframe from 'react-iframe'
 import About from './About.js'
 import ReactDOM from 'react-dom';
+import Countdown from 'react-countdown';
 
 function App() {
   // fetch('http://localhost:5000')
@@ -46,6 +47,8 @@ function App() {
             <b>></b> &nbsp;starts <b>Saturday 3-21-2020</b> @ 10am PST
           </div>
         </div>
+
+        <div className="countdown"><Countdown date={Date.now() + 296940612} /></div>
 
         <button className="join-button" onClick={handleJoinClick}>
           JOIN THE FIGHT
