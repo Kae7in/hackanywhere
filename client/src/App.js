@@ -48,7 +48,7 @@ function App() {
           </div>
         </div>
 
-        <div className="countdown"><Countdown date={Date.now() + 293998655} /></div>
+        <div className="countdown"><Countdown date={Date.now() + 293227945} /></div>
 
         <button className="join-button" onClick={handleJoinClick}>
           JOIN THE FIGHT
