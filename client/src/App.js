@@ -43,12 +43,12 @@ function App() {
         <div className="hackathon-1">
           <div>Hackathon #1</div>
           <div>
-            <b>></b> &nbsp;Hack while quarantined<br />
+            <b>></b> &nbsp;QUARANTINED<br />
             <b>></b> &nbsp;starts <b>Saturday 3-21-2020</b> @ 10am PST
           </div>
         </div>
 
-        <div className="countdown"><Countdown date={Date.now() + 296940612} /></div>
+        <div className="countdown"><Countdown date={Date.now() + 293998655} /></div>
 
         <button className="join-button" onClick={handleJoinClick}>
           JOIN THE FIGHT
