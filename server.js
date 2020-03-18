@@ -1,10 +1,25 @@
+
 const express = require('express')
+const favicon = require('express-favicon')
+const path = require('path')
+const cors = require("cors")
+
 const app = express()
 const port = process.env.PORT || 5000
-const cors = require("cors")
 
 app.use(cors())
 
-app.get('/', (req, res) => res.send({ message: 'Hello, World!' }))
+// app.get('/', (req, res) => res.send({ message: 'Hello, World!' }))
+
+app.use(favicon(__dirname + '/client/build/favicon.ico'));
+// the __dirname is the current directory from where the script is running
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'client/build')));
+app.get('/ping', function (req, res) {
+ return res.send('pong');
+});
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
