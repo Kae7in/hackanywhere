@@ -71,7 +71,7 @@ function App() {
           <div>writers</div>
           <div>hackers</div>
           <div>video editors</div>
-          <div>artist</div>
+          <div>artists</div>
           <div>musicians</div>
         </div>
 
