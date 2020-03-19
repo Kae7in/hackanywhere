@@ -1,13 +1,14 @@
-
 const express = require('express')
 const favicon = require('express-favicon')
 const path = require('path')
 const cors = require("cors")
+const sslRedirect = require('heroku-ssl-redirect')
 
 const app = express()
 const port = process.env.PORT || 5000
 
 app.use(cors())
+app.use(sslRedirect())
 
 // app.get('/', (req, res) => res.send({ message: 'Hello, World!' }))
 
