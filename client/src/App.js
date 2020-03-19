@@ -37,7 +37,7 @@ function App() {
 
         <div className="headline">
           <h1>A fully <b>remote hackathon</b></h1>
-          <h3><b>></b> &nbsp;Collaborate with others while quarantined to combat the COVID-19 virus.</h3>
+          <h3><b>></b> &nbsp;Living in quarantine from the COVID-19 virus? Hack alongside others, virtually.</h3>
         </div>
 
         <div className="hackathon-1">
