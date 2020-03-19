@@ -44,11 +44,11 @@ function App() {
           <div>Hackathon #1</div>
           <div>
             <b>></b> &nbsp;QUARANTINED<br />
-            <b>></b> &nbsp;starts <b>Saturday 3-21-2020</b> @ 10am PST
+            <b>></b> &nbsp;starts <b>Saturday 3-21-2020</b> @ 9am PST
           </div>
         </div>
 
-        <div className="countdown"><Countdown date={Date.now() + calcTimeDelta(new Date(2020, 2, 21, 10, 0, 0, 0), Date.now()).total} /></div>
+        <div className="countdown"><Countdown date={Date.now() + calcTimeDelta(new Date(2020, 2, 21, 9, 0, 0, 0), Date.now()).total} /></div>
 
         <button className="join-button" onClick={handleJoinClick}>
           JOIN THE FIGHT
