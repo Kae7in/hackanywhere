@@ -51,7 +51,7 @@ function App() {
         <div className="countdown"><Countdown date={Date.now() + calcTimeDelta(new Date(2020, 2, 21, 9, 0, 0, 0), Date.now()).total} /></div>
 
         <button className="join-button" onClick={handleJoinClick}>
-          JOIN THE FIGHT
+          START HACKING
         </button>
 
         <div className="how-it-works">
